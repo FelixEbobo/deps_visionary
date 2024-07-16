@@ -1,0 +1,18 @@
+pivot_projects:
+  - company/internal/production
+ignored_projects:
+  - project_name_1
+  - team/some-team/project_name_3
+dockerfile_argument_map:
+  REGISTRY_PATH: "gitlab.example.com/"
+docker_suffixes:
+  - alma
+  - debian
+project_aliases:
+  company_lib: "company/internal/company_lib"
+gitlab:
+  url: https://gitlab.example.com/
+  token: some-auth-token-in-gitlab
+redis:
+  url: "redis://localhost:6379"
+  lock_max_time: 15

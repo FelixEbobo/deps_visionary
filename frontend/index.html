@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Deps visionary</title>
+  <!-- <link href="https://www.flaticon.com/free-icons/visionary" title="visionary icons""> -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      padding: 2em;
+    }
+
+    div {
+      padding-bottom: 1em;
+    }
+    </style>
+</head>
+<body>
+  <div id="control">
+    <label for="diagram-type">Diagram type:</label>
+    <select name="Diagram type" id="diagram-type-select">
+      <option value="basic" selected>basic tree</option>
+      <option value="round">round tree</option>
+    </select>
+
+    <select name="projects" id="pivot-project-select"></select>
+    <select name="projects versions" id="project-tag-select"></select>
+    <input type="button" onclick="draw_diagram_event(this)" value="draw diagram">
+    <input type="button" onclick="mocks(this)" value="mock diagram">
+  </div>
+  <div id="my_dataviz">
+  </div>
+  
+  <script src="d3.v6.js"></script>
+  <script src="index.js"></script>
+</body>

@@ -1,0 +1,45 @@
+[project]
+name = "Deps-Visionary"
+description = "Tool to collect info about dependencies in pivot projects from GitLab repositories and visualize them via tree graph"
+version = "0.0.1"
+
+dependencies = [
+  "pydantic==2.7.4",
+  "requests==2.32.3",
+  "colorama==0.4.6",
+  "PyYAML==6.0.1",
+  "fastapi==0.111.0",
+  "celery==5.4.0",
+  "redis==5.0.7",
+]
+
+requires-python = ">= 3.12"
+
+authors = [
+  {name = "Artem Ansimov", email="artansimov@yandex.ru"}
+]
+
+[tool.setuptools]
+py-modules = []
+
+## Pylint
+
+[tool.pylint.basic]
+good-names = ["f", "_"]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pylint."MESSAGES CONTROL"]
+
+disable = '''
+  missing-class-docstring,
+  missing-module-docstring,
+  missing-function-docstring
+  '''
+
+## Black
+
+[tool.black]
+target-version = ['py312']
+line-length = 120

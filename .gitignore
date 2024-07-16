@@ -1,0 +1,6 @@
+venv/
+.vscode/
+.garbage/
+projects/
+
+frontend/mock_deps.json
